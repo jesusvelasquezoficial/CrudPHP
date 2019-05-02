@@ -11,17 +11,17 @@
 
       $crud = new Crud('usuarios');
 
-      $id_insertado = $crud->insert([
-        "nombre" => "Jesus",
-        "apellido" => "Velasquez",
-        "edad" => 22,
-        "email" => "jesusvelasquezoficial@gmail.com",
-        "telefono" => "04123199657",
-        "fecha_registro" => date("Y-m-d H:i:s")
-      ]);
-      
-      echo "El ID INSERTADO ES: ".$id_insertado;
-      echo "<br/>";
+      // $id_insertado = $crud->insert([
+      //   "nombre" => "Jesus",
+      //   "apellido" => "Velasquez",
+      //   "edad" => 22,
+      //   "email" => "jesusvelasquezoficial@gmail.com",
+      //   "telefono" => "04123199657",
+      //   "fecha_registro" => date("Y-m-d H:i:s")
+      // ]);
+      //
+      // echo "El ID INSERTADO ES: ".$id_insertado;
+      // echo "<br/>";
 
       // $id_modificado = $crud->where("id", "=", 4)->modificar([
       //   "email" => "fagredameza@gmail.com"
