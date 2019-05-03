@@ -7,38 +7,14 @@
   <body>
     <?php
       require_once '/bin/conexion/conexion.php';
-      require_once '/bin/persistencia/crud.php';
-
-      $crud = new Crud('usuarios');
-
-      // $id_insertado = $crud->insert([
-      //   "nombre" => "Jesus",
-      //   "apellido" => "Velasquez",
-      //   "edad" => 22,
-      //   "email" => "jesusvelasquezoficial@gmail.com",
-      //   "telefono" => "04123199657",
-      //   "fecha_registro" => date("Y-m-d H:i:s")
-      // ]);
-      //
-      // echo "El ID INSERTADO ES: ".$id_insertado;
-      // echo "<br/>";
-
-      $id_modificado = $crud->where("id", "=", 4)->modificar([
-        "nombre" => "jose",
-        "apellido" => "martinez"
-      ]);
-
-      echo "El ID MODIFICADO ES: ".$id_modificado;
-      echo "<br/>";
-
-      // $id_eliminado = $crud->where("id", "=", 4)->borrar();
-      // echo "El ID ELIMINADO ES: ".$id_eliminado;
-      // echo "<br/>";
-
-      $lista = $crud->get();
+      require_once '/bin/persistencia/Crud.php';
+      require_once '/bin/persistencia/modelos/ModeloGenerico.php';
+      require_once '/bin/persistencia/modelos/Usuarios.php';
 
       echo "<pre>";
-        var_dump($lista);
+        var_dump((new Usuarios())->where("edad", "=", 2)->modificar(
+          "edad" => 25
+        ));
       echo "</pre>";
 
     ?>
