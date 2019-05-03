@@ -82,8 +82,8 @@ class ModeloGenerico extends Crud {
   }
 
   public function modificar($obj) {
-      $obj = $this->modificar($obj);
-      parent::modificar($obj);
+    $obj = $this->parsear($obj);
+    return parent::modificar($obj);
   }
 
   public function __get($nombreAtributo) {
