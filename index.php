@@ -23,12 +23,13 @@
       // echo "El ID INSERTADO ES: ".$id_insertado;
       // echo "<br/>";
 
-      // $id_modificado = $crud->where("id", "=", 4)->modificar([
-      //   "email" => "fagredameza@gmail.com"
-      // ]);
-      //
-      // echo "El ID MODIFICADO ES: ".$id_modificado;
-      // echo "<br/>";
+      $id_modificado = $crud->where("id", "=", 4)->modificar([
+        "nombre" => "jose",
+        "apellido" => "martinez"
+      ]);
+
+      echo "El ID MODIFICADO ES: ".$id_modificado;
+      echo "<br/>";
 
       // $id_eliminado = $crud->where("id", "=", 4)->borrar();
       // echo "El ID ELIMINADO ES: ".$id_eliminado;

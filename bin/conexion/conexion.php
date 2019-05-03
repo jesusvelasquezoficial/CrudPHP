@@ -4,7 +4,7 @@
  *
  */
 class Conexion {
-
+  // VARIABLES PRIVADAS
   private $conexion;
   private $configuracion = [
     "driver" => "mysql",
@@ -19,8 +19,10 @@ class Conexion {
   public function __construct() {
     // code...
   }
+  
 
-  public function conectar($value='') {
+  // CONECTAR
+  public function conectar() {
     try {
       $CONTROLADOR = $this->configuracion['driver'];
       $SERVIDOR = $this->configuracion['host'];
@@ -32,7 +34,8 @@ class Conexion {
 
       $url = "{$CONTROLADOR}:host={$SERVIDOR}:{$PUERTO};"
               . "dbname={$BASE_DATOS};charset={$CODIFICACION}";
-      //Conexion:
+
+      // CONEXION:
       $this->conexion = new PDO($url,$USUARIO,$CLAVE);
       return $this->conexion;
     } catch (\Exception $e) {

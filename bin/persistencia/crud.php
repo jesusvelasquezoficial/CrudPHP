@@ -47,7 +47,7 @@ class Crud {
     try {
       $campos = "";
       foreach ($obj as $llave => $valor) {
-        $campos .= "`$llave`=:$llave";
+        $campos .= "`$llave`=:$llave,";
       }
       $campos = rtrim($campos, ","); //Eliminamos la ultima COMA (,)
       $this->sql = "UPDATE {$this->tabla} SET {$campos} {$this->wheres}";
@@ -72,7 +72,7 @@ class Crud {
   }
 
   public function where($llave, $condicion, $valor) {
-    $this->wheres .= (strpos($this->wheres, "WHERE")) ? " AND " : "WHERE";
+    $this->wheres .= (strpos($this->wheres, "WHERE")) ? " AND " : " WHERE ";
     $this->wheres .= "`$llave` $condicion " . ((is_string($valor)) ? "\"$valor\"" : $valor) . " ";
     return $this;
   }
