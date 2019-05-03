@@ -10,12 +10,24 @@
       require_once '/bin/persistencia/Crud.php';
       require_once '/bin/persistencia/modelos/ModeloGenerico.php';
       require_once '/bin/persistencia/modelos/Usuarios.php';
+      require_once '/bin/http/controladorUsuarios.php';
 
-      echo "<pre>";
-        var_dump((new Usuarios())->where("edad", "=", 2)->modificar(
-          "edad" => 25
-        ));
-      echo "</pre>";
+
+      $usuario = [
+        "idUsuario" => 2,
+        "edad" => 45
+      ];
+
+      $controladorUsuarios = new controladorUsuarios();
+      // $controladorUsuarios->insertarUsuario($usuario);
+      // $result = $controladorUsuarios->listarUsuarios();
+      // var_dump($result);
+      //
+      // $result = $controladorUsuarios->buscarUsuarioPorId(2);
+      // var_dump($result);
+
+      $result = $controladorUsuarios->actualizarUsuario($usuario);
+      var_dump($result);
 
     ?>
   </body>
