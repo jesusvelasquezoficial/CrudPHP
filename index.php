@@ -12,22 +12,29 @@
       require_once '/bin/persistencia/modelos/Usuarios.php';
       require_once '/bin/http/controladorUsuarios.php';
 
+      echo "<pre>";
 
       $usuario = [
-        "idUsuario" => 2,
-        "edad" => 45
+        "nombre" => "Jesus",
+        "apellido" => "Velasquez",
+        "edad" => 22,
+        "email" => "Jesusvelasquezoficial@gmail.com",
+        "telefono" => "04123199657",
+        "fecha_registro" => date("Y-m-d H:i:s")
       ];
 
       $controladorUsuarios = new controladorUsuarios();
       // $controladorUsuarios->insertarUsuario($usuario);
-      // $result = $controladorUsuarios->listarUsuarios();
-      // var_dump($result);
-      //
+      $result = $controladorUsuarios->listarUsuarios();
+      var_dump($result);
+
       // $result = $controladorUsuarios->buscarUsuarioPorId(2);
       // var_dump($result);
+      //
+      // $result = $controladorUsuarios->actualizarUsuario($usuario);
+      // var_dump($result);
 
-      $result = $controladorUsuarios->actualizarUsuario($usuario);
-      var_dump($result);
+      echo "</pre>";
 
     ?>
   </body>
