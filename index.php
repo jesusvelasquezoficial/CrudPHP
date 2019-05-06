@@ -11,8 +11,10 @@
       require_once '/bin/persistencia/modelos/ModeloGenerico.php';
       require_once '/bin/persistencia/modelos/Usuarios.php';
       require_once '/bin/http/controladorUsuarios.php';
+      require_once '/bin/constantes/EMensajes.php';
+      require_once '/bin/http/respuesta.php';
 
-      echo "<pre>";
+      // echo "<pre>";
 
       $usuario = [
         "nombre" => "Jesus",
@@ -25,8 +27,9 @@
 
       $controladorUsuarios = new controladorUsuarios();
       // $controladorUsuarios->insertarUsuario($usuario);
-      $result = $controladorUsuarios->listarUsuarios();
-      var_dump($result);
+      $result = $controladorUsuarios->listarUsuarios()->json();
+      echo ($result);
+      // echo $result;
 
       // $result = $controladorUsuarios->buscarUsuarioPorId(2);
       // var_dump($result);
@@ -34,7 +37,7 @@
       // $result = $controladorUsuarios->actualizarUsuario($usuario);
       // var_dump($result);
 
-      echo "</pre>";
+      // echo "</pre>";
 
     ?>
   </body>
