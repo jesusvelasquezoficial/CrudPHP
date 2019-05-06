@@ -6,13 +6,17 @@
   </head>
   <body>
     <?php
-      require_once '/bin/conexion/conexion.php';
-      require_once '/bin/persistencia/Crud.php';
-      require_once '/bin/persistencia/modelos/ModeloGenerico.php';
-      require_once '/bin/persistencia/modelos/Usuarios.php';
-      require_once '/bin/http/controladorUsuarios.php';
-      require_once '/bin/constantes/EMensajes.php';
-      require_once '/bin/http/respuesta.php';
+      // require_once '/app/conexion/conexion.php';
+      // require_once '/app/persistencia/Crud.php';
+      // require_once '/app/persistencia/modelos/ModeloGenerico.php';
+      // require_once '/app/persistencia/modelos/Usuarios.php';
+      // require_once '/app/http/controladorUsuarios.php';
+      // require_once '/app/constantes/EMensajes.php';
+      // require_once '/app/http/respuesta.php';
+
+      require_once './src/roots.php';
+      require_once PATH_SRC.'autoloader/autoloader.php';
+      autoloader::registrar();
 
       // echo "<pre>";
 

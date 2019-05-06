@@ -3,7 +3,7 @@
 /**
  *
  */
-class Conexion {
+class conexion {
   // VARIABLES PRIVADAS
   private $conexion;
   private $configuracion = [
@@ -19,7 +19,7 @@ class Conexion {
   public function __construct() {
     // code...
   }
-  
+
 
   // CONECTAR
   public function conectar() {

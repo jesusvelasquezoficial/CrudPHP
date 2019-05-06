@@ -11,7 +11,7 @@ class Crud {
   protected $sql = null;
 
   public function __construct($tabla = null) {
-    $this->conexion = (new Conexion())->conectar();
+    $this->conexion = (new conexion())->conectar();
     $this->tabla = $tabla;
   }
 
