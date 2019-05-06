@@ -27,8 +27,9 @@
 
       $controladorUsuarios = new controladorUsuarios();
       // $controladorUsuarios->insertarUsuario($usuario);
-      $result = $controladorUsuarios->listarUsuarios()->json();
-      echo ($result);
+      $result = $controladorUsuarios->listarUsuarios();
+      // $result = $controladorUsuarios->listarUsuarios()->json();
+      var_dump($result);
       // echo $result;
 
       // $result = $controladorUsuarios->buscarUsuarioPorId(2);
